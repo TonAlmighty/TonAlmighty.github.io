@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+				<html>
+				<head>
+				<meta name=viewport content="width=device-width,
+				initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+				<meta name="apple-mobile-web-app-capable" content="yes" />
+				<meta charset="utf-8">
+				<title>Template example || follow it  to convert code to all Network</title>
+				</head>
+				<body onload = "gameStart()">
+				<!-- Need a tag <div id = "game"></div> -->
+				<div id = "game"></div>
+				
+				<script type="text/javascript">
+				// add comment like below to covert to Ironsource
+				//startgame	
+				var width_game = window.innerWidth;
+				var height_game = window.innerHeight;
+				var dpr = window.devicePixelRatio;
+				var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+				var linkDownload =
+				"https://play.google.com/store/apps/details?id=com.abistudio.jigsaw.blast";
+				var operatingsystem = "";
+				if (/android/i.test(userAgent)) {
+					operatingsystem = "Android";
+					linkDownload = 
+					"https://play.google.com/store/apps/details?id=com.abistudio.jigsaw.blast";
+				}
+				if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+					operatingsystem = "iOS";
+					linkDownload =
+					'https://play.google.com/store/apps/details?id=com.abistudio.jigsaw.blast';
+				}
+				var isLandscape = false;
+				var ratio = width_game/height_game;
+				if(width_game>height_game){
+					isLandscape = true;
+				}
+				mraid.open(link);
+				function CTAClick(){
+					mraid.open(linkDownload);
+				}
+				function gameStart(){
+					// code game here
+				}
+				</script>
+				</body>
+				</html>
