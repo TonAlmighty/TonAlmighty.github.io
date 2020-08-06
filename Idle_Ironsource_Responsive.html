@@ -329,39 +329,39 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 			currentTimeV1 = video.currentTime;
 			currentTimeV2 = video2.currentTime;
 
-			game.scale.onSizeChange.add(function()
-			{
-				game.scale.setGameSize(window.innerWidth*dpr, window.innerHeight*dpr);
-				Resize();
-				video2.onComplete.add(function()
-			{
-				if(download_end){
-					download_end.destroy(true) ;
-					createDownload();
-				}
-				// createEndSound();
-				tweenGun();
-				game.world.bringToTop(download_end);
-				gun_1.events.onInputDown.add(function()
-				{
-					dapi.openStoreUrl(linkDownload);
+			// game.scale.onSizeChange.add(function()
+			// {
+			// 	game.scale.setGameSize(window.innerWidth*dpr, window.innerHeight*dpr);
+			// 	Resize();
+			// 	video2.onComplete.add(function()
+			// {
+			// 	if(download_end){
+			// 		download_end.destroy(true) ;
+			// 		createDownload();
+			// 	}
+			// 	// createEndSound();
+			// 	tweenGun();
+			// 	game.world.bringToTop(download_end);
+			// 	gun_1.events.onInputDown.add(function()
+			// 	{
+			// 		dapi.openStoreUrl(linkDownload);
 
-				},this);
+			// 	},this);
 
-				gun_2.events.onInputDown.add(function()
-				{
-					dapi.openStoreUrl(linkDownload);
+			// 	gun_2.events.onInputDown.add(function()
+			// 	{
+			// 		dapi.openStoreUrl(linkDownload);
 
-				},this);
+			// 	},this);
 
-				gun_3.events.onInputDown.add(function()
-				{
-					dapi.openStoreUrl(linkDownload);
+			// 	gun_3.events.onInputDown.add(function()
+			// 	{
+			// 		dapi.openStoreUrl(linkDownload);
 
-				},this);
+			// 	},this);
 
-			},this);
-			},this);
+			// },this);
+			// },this);
 
 			// game.time.events.add(Phaser.Timer.SECOND * 20,createEndFrame,this);
 				
