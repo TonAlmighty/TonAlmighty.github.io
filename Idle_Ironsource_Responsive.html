@@ -605,10 +605,10 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 			skill_2.scale.setTo(1/ratioButton,1/ratioButton);
 
 
-			use_skill_text = game.add.sprite(game.width/2,game.height/3,'text_1');
-			use_skill_text.anchor.setTo(0.5);
-			var text_1_ratio = use_skill_text.width/(game.width/4);
-			use_skill_text.scale.setTo(1/text_1_ratio);
+			// use_skill_text = game.add.sprite(game.width/2,game.height/3,'text_1');
+			// use_skill_text.anchor.setTo(0.5);
+			// var text_1_ratio = use_skill_text.width/(game.width/6);
+			// use_skill_text.scale.setTo(1/text_1_ratio);
 
 		}
 		else
@@ -618,10 +618,10 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 			skill_2.scale.setTo(1/ratioButton,1/ratioButton);
 
 
-			use_skill_text = game.add.sprite(skill_2.x,skill_2.y -80,'text_1');
-			use_skill_text.anchor.setTo(0.5);
-			var text_1_ratio = use_skill_text.width/(game.width/1.5);
-			use_skill_text.scale.setTo(1/text_1_ratio);
+			// use_skill_text = game.add.sprite(game.width/2,game.height/3,'text_1');
+			// use_skill_text.anchor.setTo(0.5);
+			// var text_1_ratio = use_skill_text.width/(game.width/3);
+			// use_skill_text.scale.setTo(1/text_1_ratio);
 
 
 			console.log('create Gun');
@@ -650,23 +650,21 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 
 			use_skill_text = game.add.sprite(game.width/2,game.height/3,'text_1');
 			use_skill_text.anchor.setTo(0.5);
-			var text_1_ratio = use_skill_text.width/(game.width/4);
+			var text_1_ratio = use_skill_text.width/(game.width/6);
 			use_skill_text.scale.setTo(1/text_1_ratio);
 
 		}
+
 		else
 		{
-
 			ratioButton = skill_1.width/(game.width/10);
 			skill_1.scale.setTo(1/ratioButton,1/ratioButton);
 
 
 			use_skill_text = game.add.sprite(game.width/2,game.height/3,'text_1');
 			use_skill_text.anchor.setTo(0.5);
-			var text_1_ratio = use_skill_text.width/(game.width/1.5);
+			var text_1_ratio = use_skill_text.width/(game.width/2);
 			use_skill_text.scale.setTo(1/text_1_ratio);
-
-
 			console.log('create Gun');
 		}
 	}	
@@ -738,6 +736,13 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 				dark_bg.destroy();
 			}
 
+			if(use_skill_text)
+			{
+				use_skill_text.destroy();
+
+				console.log('destroy text 1');
+			}
+
 			console.log('click skill 1');
 
 			if(download_end){
@@ -770,6 +775,11 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 				dark_bg.destroy();
 			}
 
+			if(text_2)
+			{
+				text_2.destroy();
+			}
+
 			if(download_end){
 					download_end.destroy(true) ;
 					createDownload();
@@ -788,14 +798,14 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 		{
 			text_2 = game.add.sprite(game.width/2,game.height/3,'text_2');
 			text_2.anchor.setTo(0.5);
-			var text_2_ratio = text_2.width/(game.width/4);
+			var text_2_ratio = text_2.width/(game.width/6);
 			text_2.scale.setTo(1/text_2_ratio);
 		}
 		else
 		{
 			text_2 = game.add.sprite(game.width/2,game.height/3,'text_2');
 			text_2.anchor.setTo(0.5);
-			var text_2_ratio = text_2.width/(game.width/1.5);
+			var text_2_ratio = text_2.width/(game.width/2);
 			text_2.scale.setTo(1/text_2_ratio);
 		}
 
@@ -810,14 +820,14 @@ var userAgent = navigator.userAgent || navigator.vender || window.opera;
 			console.log('textfinal');
 			final_text = game.add.sprite(game.width/2,game.height/3,'final_text');
 			final_text.anchor.setTo(0.5);
-			var final_text_ratio = final_text.width/(game.width/4);
+			var final_text_ratio = final_text.width/(game.width/6);
 			final_text.scale.setTo(1/final_text_ratio);
 		}
 		else
 		{
 			final_text = game.add.sprite(game.width/2,game.height/3,'final_text');
 			final_text.anchor.setTo(0.5);
-			var final_text_ratio = final_text.width/(game.width/1.5);
+			var final_text_ratio = final_text.width/(game.width/2);
 			final_text.scale.setTo(1/final_text_ratio);
 		}
 
