@@ -959,12 +959,15 @@
 
 		function collisionHandler(arrow,enemies)
 		{
-			var explosion = game.add.sprite(enemy_1.x,enemy_1.y,'enemy_explode');
+			if(enemy_1){
+				var explosion = game.add.sprite(enemy_1.x,enemy_1.y,'enemy_explode');
 			explosion.anchor.setTo(0.5);
 			var explosion_ratio = explosion.height/(game.height/2);
 			explosion.scale.setTo(1/explosion_ratio);
 			explosion.animations.add('enemy_explode');
 			explosion.animations.play('enemy_explode',20,false,true);
+			}
+			
 
 			CreateBoxSound();
 			CreateShootEnemySound();
