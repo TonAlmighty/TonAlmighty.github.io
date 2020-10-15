@@ -1598,7 +1598,7 @@ function ship_overlap_coin(ship,coin){
 									bullet_1.body.checkWorldBounds = true;
 									bulletGroup.add(bullet_1.body);
 									bullet_1.body.body.velocity.y = -1000*dpr;
-									bullet_1.body.body.velocity.x = -60 * dpr;
+									bullet_1.body.body.velocity.x = -40 * dpr;
 
 									// var bullet_2 = new Bullet_Ship1();
 									// bullet_2.body.reset(this.body.x,this.body.y-this.body.sprite.height/1.5);
@@ -1613,7 +1613,7 @@ function ship_overlap_coin(ship,coin){
 									bullet_3.body.checkWorldBounds = true;
 									bulletGroup.add(bullet_3.body);
 									bullet_3.body.body.velocity.y = -1000*dpr;
-									bullet_3.body.body.velocity.x = 60 * dpr;
+									bullet_3.body.body.velocity.x = 40 * dpr;
 
 									// createGunFx(-this.body.sprite.width/5.5,-this.body.sprite.height/3.5);
 									createGunFx(0,-this.body.sprite.height/2);
