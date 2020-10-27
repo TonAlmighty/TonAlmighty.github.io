@@ -820,7 +820,8 @@ if(!Phaser.Graphics.prototype.drawTriangle) {
 
 					createBoss_1();
 					game.time.events.add(Phaser.Timer.SECOND * 1,function(){
-					ship.body.inputEnabled= true;								
+					ship.body.inputEnabled= true;	
+					ship.body.enableDrag = false;							
 					ship.body.events.onInputDown.add(function(){
 						console.log('end ne`');
 					},this)	;											
