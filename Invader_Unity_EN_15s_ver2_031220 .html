@@ -898,6 +898,17 @@ if(!Phaser.Graphics.prototype.drawTriangle) {
 						 	ship.body.inputEnabled = true;
 							ship.body.input.enableDrag(); 
 
+								if(isTouch == true && ship.body){
+									game.time.events.add(Phaser.Timer.SECOND * 10,function(){
+
+										isEndgame=true;
+										endgame();
+										var tween_1 = ship.body.tween.to(game.width/2, game.height*3.8/5);
+										var tween_1 = game.add.tween(ship.body).to({x: game.width/2,y:game.height*3.8/5},1000,"Linear",true)
+									},this);
+							}
+
+
 								game.time.events.add(Phaser.Timer.SECOND * 7,function(){
 								if(isTouch == false && ship.body){
 									mraid.open(linkDownload);
@@ -2547,8 +2558,11 @@ if(!Phaser.Graphics.prototype.drawTriangle) {
 							game.world.bringToTop(hand);
 						}
 
-						createDarkBG();
+						if(isEndgame==true){
+								createDarkBG();
 						createYesNo();
+						}
+					
 						createIconGame();
 
 
