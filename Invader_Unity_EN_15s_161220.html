@@ -375,7 +375,7 @@
 					ship.body.events.onInputDown.add(function(){
 						console.log('end ne`');
 
-						dapi.openStoreUrl(linkDownload);
+						mraid.open(linkDownload);
 					},this)	;											
 													
 					});
@@ -873,7 +873,7 @@
 			}
 			icon_game.scale.setTo(1/ratioIcon);
 			icon_game.onInputDown.add(function(){
-				dapi.openStoreUrl(linkDownload);
+				mraid.open(linkDownload);
 			},this);
 			icon_game.reset(game.width-icon_game.width/1.5,game.height-icon_game.height/1.5);
 			createPlayFree();
@@ -894,7 +894,7 @@
 			}
 			play_free.scale.setTo(1/play_free.ratio);
 			play_free.onInputDown.add(function(){
-				dapi.openStoreUrl(linkDownload);
+				mraid.open(linkDownload);
 			},this);
 			// play_free.reset(game.width/2,icon_game.y+icon_game.height/4);
 			
@@ -920,7 +920,7 @@
 			}
 			play_free.scale.setTo(1/play_free.ratio);
 			play_free.onInputDown.add(function(){
-				dapi.openStoreUrl(linkDownload);
+				mraid.open(linkDownload);
 			},this);
 			if(checkIsLandScape()){
 				play_free.reset(game.width/2,game.height*0.8);
